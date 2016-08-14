@@ -1,0 +1,53 @@
+// Carousel in pure CSS
+
+// Number of panes
+$panes: 4;
+
+.carousel, .carousel-panes {
+  overflow: hidden;
+}
+
+.carousel {
+  width: 100%;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.carousel-panes {
+  // The two following lines remove extraneous spacing around the carousel
+  font-size: 0;
+  padding: 0;
+  width: $panes * 100%;
+  list-style: none;
+  position: relative;
+  animation: carousel 20s infinite;
+
+  > li {
+    position: relative;
+    float: left;
+    width: 1 / $panes * 100%;
+  }
+}
+
+@keyframes carousel {
+  0%   { left: 0; }
+  20%  { left: 0; }
+  25%  { left: -100%; }
+  45%  { left: -100%; }
+  50%  { left: -200%; }
+  70%  { left: -200%; }
+  75%  { left: -300%; }
+  95%  { left: -300%; }
+  100% { left: 0; }
+}
+
+//
+// The following are cosmetic styles
+//
+
+.carousel {
+  box-shadow: 0 0 8px rgba(0, 0, 0, .75);
+}

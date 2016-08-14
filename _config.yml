@@ -1,0 +1,16 @@
+# Site settings
+title: OpenRW
+description: >
+  OpenRW is a free, open source re-implementation of the Grand Theft Auto III
+  PC video game.
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+sass:
+  style: compressed
+exclude:
+  - CNAME
+  - README.md
+  - LICENSE.md

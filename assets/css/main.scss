@@ -1,0 +1,249 @@
+---
+# This ensures that this file is being read by Jekyll
+---
+
+@import "fonts";
+@import "carousel";
+
+$default-color: #333;
+$desktop-default-font-size: 17px;
+$mobile-default-font-size: 15px;
+$menu-background-color: #f0f0f0;
+$menu-color: #333;
+$menu-separator-color: #666;
+$a-color: #3265ad;
+$a-dark-color: #cdf;
+$menu-height: 51px;
+
+// Adjust anchor link location to not cover titles with header
+:target:before {
+  content: "";
+  display: block;
+  height: $menu-height;
+  margin: -$menu-height 0 0;
+}
+
+body {
+  color: $default-color;
+  cursor: default;
+  font-size: $desktop-default-font-size;
+  margin-top: $menu-height;
+}
+
+// Pure-friendly font-family setting
+// http://purecss.io/grids/#using-grids-with-custom-fonts
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+  font-family: "Titillium Web", sans-serif;
+}
+
+h1 {
+  margin: 50px 0;
+}
+
+h2 {
+  margin: 48px 0 16px 0;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.15s color;
+  color: $a-color;
+  &:hover, &:focus {
+    text-decoration: underline;
+    color: lighten($a-color, 15%);
+  }
+  &:active {
+    text-decoration: none;
+    color: darken($a-color, 15%);
+  }
+}
+
+code {
+  background-color: #dfdfdf;
+}
+
+footer {
+  padding-top: 50px;
+  color: #999;
+  font-size: 90%;
+}
+
+// Styles that affect the whole menu
+.pure-menu.pure-menu-horizontal {
+  padding: 0;
+  z-index: 100;
+  line-height: 1;
+  margin-top: -$menu-height;
+  background-color: $menu-background-color;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .5);
+  position: fixed;
+
+  a {
+    color: $menu-color;
+  }
+}
+
+.pure-menu-heading {
+  text-transform: none;
+  font-weight: bold;
+}
+
+.menu-separator {
+  height: 30px;
+  margin: 0 10px -11px 10px;
+  display: inline-block;
+  width: 0;
+  border-left: 1px solid $menu-separator-color;
+}
+
+.content, .nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1250px) {
+  .content {
+    margin: 0 2.5%;
+  }
+}
+
+.note {
+  font-style: italic;
+  font-size: 90%;
+  color: #ccc;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.pull-right {
+  float: right;
+}
+
+a.pure-menu-link {
+  transition: .15s background-color;
+  text-decoration: none;
+  padding: 17px 15px;
+  margin: 0;
+  &:hover, &:focus {
+    background-color: rgba(255, 255, 255, .65);
+  }
+  &:active {
+    background-color: rgba(0, 0, 0, .1);
+  }
+}
+
+.header-main {
+  margin: 0;
+}
+
+// The main section of the home page
+.jumbotron {
+  background-color: #123456;
+  padding: 50px 0;
+  color: #fff;
+
+  a {
+    color: $a-dark-color;
+    transition: .15s color;
+    &:hover, &:focus {
+      color: lighten($a-dark-color, 15%);
+    }
+    &:active {
+      color: darken($a-dark-color, 15%);
+    }
+  }
+
+  h1 {
+    font-size: 52px;
+  }
+}
+
+// For FAQ and news post content
+.width-reduced {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+// For the news list
+.post-meta, .news-item h2 {
+  font-size: 140%;
+  margin: 10px 0;
+}
+
+.main-heading {
+  text-align: center;
+}
+
+.post-date {
+  margin-top: -40px;
+  margin-bottom: 40px;
+}
+
+.feed-rss {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.pure-button {
+  padding: 12px 24px;
+}
+
+a.pure-button {
+  background-color: #58a;
+  color: #fff;
+  text-decoration: none;
+  // Prevent existing anchor styles from modifying button text color
+  &:hover, &:focus, &:active {
+    color: inherit;
+  }
+}
+
+.button-download-wrapper {
+  margin-top: 40px;
+  text-align: center;
+}
+
+// Sticky footer
+// https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+.site {
+  display: flex;
+  // FIXME: min-height accounts for the menu height, but inserting $menu-height
+  // won't work for some reason
+  min-height: calc(100vh - 51px);
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
+
+// Styles that apply only to narrow screens (typically mobile devices)
+@media (max-width: 1023px) {
+  body {
+    font-size: $mobile-default-font-size;
+    margin-top: $menu-height * $mobile-default-font-size / $desktop-default-font-size;
+  }
+
+  .pure-menu.pure-menu-horizontal {
+    margin-top: -($menu-height * $mobile-default-font-size / $desktop-default-font-size);
+  }
+
+  .jumbotron .pure-u-1 {
+    margin-bottom: 50px;
+  }
+
+  .jumbotron h1 {
+    margin-top: 0;
+  }
+
+  .post-meta {
+    margin-bottom: -5px;
+  }
+
+  .news-item h2 {
+    margin-bottom: 40px;
+  }
+}

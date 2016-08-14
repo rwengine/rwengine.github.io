@@ -1,0 +1,2 @@
+{% capture mdtemp %}{% include {{ include.file }} %}{% endcapture %}
+{{ mdtemp | markdownify }}
