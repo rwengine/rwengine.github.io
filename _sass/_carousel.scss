@@ -32,6 +32,7 @@ $panes: 4;
   }
 }
 
+// This needs to be changed when the number of slides is changed
 @keyframes carousel {
   0%   { left: 0; }
   20%  { left: 0; }

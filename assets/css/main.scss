@@ -220,8 +220,8 @@ a.pure-button {
   flex: 1;
 }
 
-// Styles that apply only to narrow screens (typically mobile devices)
-@media (max-width: 1023px) {
+// Styles that apply only to medium-sized screens (small laptops for example)
+@media (max-width: 1370px) {
   body {
     font-size: $mobile-default-font-size;
     margin-top: $menu-height * $mobile-default-font-size / $desktop-default-font-size;
@@ -230,7 +230,10 @@ a.pure-button {
   .pure-menu.pure-menu-horizontal {
     margin-top: -($menu-height * $mobile-default-font-size / $desktop-default-font-size);
   }
+}
 
+// Styles that apply only to narrow screens (typically mobile devices)
+@media (max-width: 1023px) {
   .jumbotron .pure-u-1 {
     margin-bottom: 50px;
   }
