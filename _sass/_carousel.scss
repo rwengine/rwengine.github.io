@@ -52,3 +52,9 @@ $panes: 4;
 .carousel {
   box-shadow: 0 0 8px rgba(0, 0, 0, .75);
 }
+
+@media (min-width: 1024px) {
+  .carousel {
+    margin-top: 60px;
+  }
+}

@@ -2,18 +2,9 @@
 # This ensures that this file is being read by Jekyll
 ---
 
-@import "fonts";
-@import "carousel";
-
-$default-color: #333;
-$desktop-default-font-size: 17px;
-$mobile-default-font-size: 15px;
-$menu-background-color: #f0f0f0;
-$menu-color: #333;
-$menu-separator-color: #666;
-$a-color: #3265ad;
-$a-dark-color: #cdf;
-$menu-height: 51px;
+@import "variables"; // Variable declarations
+@import "fonts";     // Web fonts
+@import "carousel";  // CSS carousel
 
 // Adjust anchor link location to not cover titles with header
 :target:before {
@@ -84,6 +75,10 @@ footer {
   }
 }
 
+.pure-g > div {
+  box-sizing: border-box;
+}
+
 .pure-menu-heading {
   text-transform: none;
   font-weight: bold;
@@ -109,8 +104,10 @@ footer {
 }
 
 .note {
+  margin-top: 12px;
+  text-align: center;
   font-style: italic;
-  font-size: 90%;
+  font-size: 95%;
   color: #ccc;
 }
 
@@ -141,6 +138,7 @@ a.pure-menu-link {
 
 // The main section of the home page
 .jumbotron {
+  background-image: url("../../media/background.jpg");
   background-color: #123456;
   padding: 50px 0;
   color: #fff;
@@ -192,12 +190,29 @@ a.pure-menu-link {
 }
 
 a.pure-button {
-  background-color: #58a;
+  font-weight: bold;
+  background-color: $button-color;
   color: #fff;
   text-decoration: none;
+  transition: .15s background-color;
+
   // Prevent existing anchor styles from modifying button text color
   &:hover, &:focus, &:active {
     color: inherit;
+  }
+
+  // Undo some Pure styles
+  &:hover, &:focus, &:active {
+    box-shadow: none;
+    background-image: none;
+  }
+
+  &:hover, &:focus {
+    background-color: lighten($button-color, 8%);
+  }
+
+  &:active {
+    background-color: darken($button-color, 8%);
   }
 }
 
@@ -218,6 +233,13 @@ a.pure-button {
 
 .site-content {
   flex: 1;
+}
+
+.what-is-openrw {
+  padding: 50px 0;
+  h1 {
+    margin-top: 0;
+  }
 }
 
 // Styles that apply only to medium-sized screens (small laptops for example)
