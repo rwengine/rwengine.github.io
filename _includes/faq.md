@@ -18,15 +18,15 @@ Other features, which would not be needed for Version 1.0 include:
 
 Features like these will not be accepted into OpenRW at present, as these don’t contribute to the primary goal. Once Version 1.0 has been reached a “new” version of OpenRW may be forked that contains these kinds of features.
 
-## Can I play OpenRW now?
-In its current state it is not possible to complete the game using OpenRW, or make any significant progress through the game. There are many bugs that need to be fixed and features that need to be developed before it becomes possible to play anything with OpenRW. The latest version of OpenRW will always be available from the source code [repository](https://github.com/rwengine/openrw)
-
 ## Do I need GTA III to play OpenRW?
 In short: Yes.
 
 OpenRW is simply a game engine that is compatible with the original game, it has no assets of its own. In order to play GTA III using  OpenRW you must own the game and have the data installed on your system. If you need a copy of the game it’s available on [Steam](http://store.steampowered.com/app/12100/)
 
 It is theoretically possible to develop a completely new game, without any of the assets or content from GTA III, however no such project is currently under way.
+
+## Can I play OpenRW now?
+In its current state it is not possible to complete the game using OpenRW, or make any significant progress through the game. There are many bugs that need to be fixed and features that need to be developed before it becomes possible to play anything with OpenRW. The latest version of OpenRW will always be available from the source code [repository](https://github.com/rwengine/openrw)
 
 ## Can I play OpenRW on my mac / linux computer?
 Yes. OpenRW runs on macOS and Linux, as well as some BSDs.
