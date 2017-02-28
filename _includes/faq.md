@@ -28,7 +28,7 @@ It is theoretically possible to develop a completely new game, without any of th
 ## Can I play OpenRW now?
 In its current state it is not possible to complete the game using OpenRW, or make any significant progress through the game. There are many bugs that need to be fixed and features that need to be developed before it becomes possible to play anything with OpenRW. The latest version of OpenRW will always be available from the source code [repository](https://github.com/rwengine/openrw).
 
-## Can I play OpenRW on my mac / linux computer?
+## Can I play OpenRW on my macOS / Linux computer?
 Yes. OpenRW runs on macOS and Linux, as well as some BSDs.
 
 ## Why make OpenRW?
