@@ -49,3 +49,16 @@ title: Open Source GTA III engine re-implementation
     {% include markdown.html file="faq.md" %}
   </div>
 </section>
+
+<script type="text/javascript">
+  var issues = document.getElementById('issues-badge');
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+      var d = JSON.parse(xhr.responseText);
+      issues.textContent = d['open_issues'];
+    }
+  }
+  xhr.open('GET', 'https://api.github.com/repos/rwengine/openrw', true);
+  xhr.send();
+</script>
