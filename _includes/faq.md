@@ -37,7 +37,7 @@ Beyond technical curiosity, OpenRW exists to conserve the game and ensure it is 
 In addition to conservation it may also offer a platform for others to build 3D action games in the future.
 
 ## Can I contribute to OpenRW?
-Yes, development of OpenRW is open, you can follow along and contribute via the GitHub [project page](https://github.com/rwengine/openrw). Also drop into the IRC channel, `#openrw` @ irc.freenode.net.
+Yes, development of OpenRW is open, you can follow along and contribute via the GitHub [project page](https://github.com/rwengine/openrw). Also drop into the IRC channel, `#openrw` @ [irc.libera.chat](https://web.libera.chat/#openrw).
 
 ## What licence is OpenRW released under
 The OpenRW engine is released under the GNU General Public License Version 3.
